@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+
+.container.wide {
+  display: block;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.card {
+  width: min(100%, 720px);
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(23, 32, 51, 0.12);
+}
+
+.wide .card {
+  width: auto;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+input[type="file"] {
+  padding: 16px;
+  border: 1px dashed #9aa7bd;
+  border-radius: 12px;
+  background: #fbfcff;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #2454ff;
+  color: white;
+}
+
+.error {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #fff0f0;
+  color: #8b1a1a;
+  margin: 16px 0;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.review {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: inherit;
+  background: #f7f8fb;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0f1320;
+    color: #edf2ff;
+  }
+  .card {
+    background: #171c2b;
+  }
+  input[type="file"], .review {
+    background: #111625;
+    color: #edf2ff;
+  }
+}
