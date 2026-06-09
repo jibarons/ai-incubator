@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Report Reviewer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Report Reviewer</h1>
+      <p>Upload a PDF, DOCX, TXT, or Markdown report and get a structured review.</p>
+
+      {% if error %}
+        <div class="error">{{ error }}</div>
+      {% endif %}
+
+      <form method="post" enctype="multipart/form-data">
+        <label for="report">Choose report</label>
+        <input id="report" name="report" type="file" accept=".pdf,.docx,.txt,.md" required>
+        <button type="submit">Review report</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
